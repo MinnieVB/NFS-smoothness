@@ -1,0 +1,123 @@
+\begin{thebibliography}{10}
+
+\bibitem{ECRYPT_key_sizes}
+{ECRYPT II} {Y}early {R}eport on {A}lgorithms and {K}ey {L}engths, 2011.
+
+\bibitem{rho_efficiency}
+S.~Bai and R.~P. Brent.
+\newblock On the efficiency of pollard’s rho method for discrete logarithms.
+\newblock {\em Australian Computer Society}, pages 125--131, 2008.
+
+\bibitem{rho_chal_1}
+D.~V. Bailey, B.~Baldwin, L.~Batina, D.~J. Bernstein, P.~Birkner, J.~W. Bos,
+  G.~V. Damme, G.~Meulenaer, J.~Fan, T.~G\"{u}neysu, F.~Gurkaynak,
+  T.~Kleinjung, T.~Lange, N.~Mentens, C.~Paar, F.~Regazzoni, P.~Schwabe, and
+  L.~Uhsadel.
+\newblock The {C}erticom {C}hallenges {ECC2-X}, 2009.
+
+\bibitem{rho_chal_2}
+D.~V. Bailey, L.~Batina, D.~J. Bernstein, P.~Birkner, J.~W. Bos, C.~Chen, G.~V.
+  Damme, G.~Meulenaer, L.~J. Dominguez-Perez, J.~Fan, T.~G\"{u}neysu,
+  F.~Gurkaynak, T.~Kleinjung, T.~Lange, N.~Mentens, R.~Niederhagen, C.~Paar,
+  F.~Regazzoni, P.~Schwabe, L.~Uhsadel, A.~V. Herrewege, and B.~Yang.
+\newblock Breaking {ECC2K}-130.
+\newblock {\em Cryptology ePrint Archive}, (541), 2009.
+
+\bibitem{towers}
+N.~Benger and M.~Scott.
+\newblock Constructing {T}ower {E}xtensions for the implementation of
+  {P}airing-{B}ased {C}ryptography, 2010.
+
+\bibitem{dan_imp}
+D.~J. Bernstein.
+\newblock implementation of $\psi$ estimation method of ``arbitrarily tight
+  bounds on the distribution of smooth integers''.
+
+\bibitem{dan_psi_est}
+D.~J. Bernstein.
+\newblock Arbitrarily tight bounds on the distribution of smooth integers.
+\newblock {\em Number theory for the Millennium}, 1:49--66, 2002.
+
+\bibitem{dan_predicting_nfs}
+D.~J. Bernstein.
+\newblock Predicting {NFS} time, 2008.
+\newblock Slides of a talk given at Cado Workshop on Integer Factorization
+  October 7, 2008. LORIA, Nancy, France.
+
+\bibitem{box-cox}
+G.E.P. Box and D.R. Cox.
+\newblock An analysis of transformations (with discussion).
+\newblock {\em Journal of the Royal Statistical Society}, 26:211--252, 1964.
+
+\bibitem{can-er-pom}
+E.~R. Canfield, P.~{Erd{\H{o}}s}, and C.~Pomerance.
+\newblock On a problem of {Oppenheim} concerning {``Factorisatio Numerorum"}.
+\newblock 17:1--28, 1983.
+
+\bibitem{hild-tene}
+A.~Hildebrand and G.~Tenenbaum.
+\newblock Integers without large prime factors.
+\newblock 5:411--484, 1993.
+
+\bibitem{joux-lercier-smart-vercauteren06}
+A.~Joux, R.~Lercier, N.~Smart, and F.~Vercauteren.
+\newblock The {N}umber {F}ield {S}ieve in the {M}edium {P}rime {C}ase.
+\newblock In C.~Dwork, editor, {\em Advances in Cryptology -- Crypto 2006},
+  number 4117 in Lecture Notes in Computer Science, pages 323--341, 2006.
+
+\bibitem{koblitz-menezes05}
+N.~Koblitz and A.~Menezes.
+\newblock Pairing-{B}ased {C}ryptography at high security levels.
+\newblock {\em IMA Int. Conf.}, 3796:13 -- 36, 2005.
+
+\bibitem{krause}
+U~Krause.
+\newblock Absch\"{a}tzungen f\"{u}r die funktion $\psi_k(x,y)$ in algebraischen
+  zahlk\"{o}rpern.
+\newblock {\em Manuscripta Mathematica}, 69:319 -- 331, 1990.
+
+\bibitem{lamacchia-odlyzko}
+B.~A. LaMacchia and A.~M. Odlyzko.
+\newblock Solving large sparse linear systems over finite fields.
+\newblock In A.~Menezes and S.~A. Vanstone, editors, {\em Advances in
+  Cryptology - Crypto 1990}, number 537 in Lecture Notes in Computer Science,
+  pages 109--133. Springer-Verlag, 1990.
+
+\bibitem{lenstra01}
+A.~K. Lenstra.
+\newblock Unbelievable {S}ecurity: {M}atching {AES} {S}ecurity {U}sing {P}ublic
+  {K}ey {S}ystems.
+\newblock In C.~Boyd, editor, {\em Advances in Cryptology -- Asiacrypt '01},
+  volume 2248 of {\em Lecture Notes in Computer Science}, pages 67--86, London,
+  UK, 2001. Springer-Verlag.
+
+\bibitem{lenstra-verheul}
+A.~K. Lenstra and E.~R. Verheul.
+\newblock Selecting {C}ryptographic {K}ey {S}izes.
+\newblock In H.~Imai and Y.~Zheng, editors, {\em Public-Key Cryptography 2000},
+  volume 1751 of {\em Lecture Notes in Computer Science}, pages 446--465,
+  London, UK, 2000. Springer-Verlag.
+
+\bibitem{pollard}
+J.~M. Pollard.
+\newblock {Monte Carlo} methods for index computation (mod $p$).
+\newblock {\em Mathematics of Computation}, 32:918--924, 1978.
+
+\bibitem{R}
+R~Core Team.
+\newblock {\em R: A Language and Environment for Statistical Computing}.
+\newblock Vienna, Austria, 2010.
+
+\bibitem{teske}
+E.~Teske.
+\newblock Speeding up pollard’s rho method for computing discrete logarithms.
+\newblock In {\em Algorithmic Number Theory Symposium (ANTS IV)}, number 1423
+  in LNCS, pages 541--553. Springer-Verlag, 1998.
+
+\bibitem{zajac}
+P.~Zajac.
+\newblock Basic remarks on the {NFS} complexity.
+\newblock Cryptology ePrint Archive, Report 2008/064, 2008.
+\newblock \url{http://eprint.iacr.org/}.
+
+\end{thebibliography}
