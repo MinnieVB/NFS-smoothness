@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  12 JUN 2013 16:13
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  2 JUL 2013 14:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -16,10 +16,13 @@ kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
  polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
 lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
 welsh, loaded.
+(./llncs.cls
+Document Class: llncs 2010/07/12 v2.17 
+ LaTeX document class for Lecture Notes in Computer Science
 (/usr/local/texlive/2012/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -33,9 +36,112 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count87
+\mult@box=\box26
+\multicol@leftmargin=\dimen103
+\c@unbalance=\count88
+\c@collectmore=\count89
+\doublecol@number=\count90
+\multicoltolerance=\count91
+\multicolpretolerance=\count92
+\full@width=\dimen104
+\page@free=\dimen105
+\premulticols=\dimen106
+\postmulticols=\dimen107
+\multicolsep=\skip43
+\multicolbaselineskip=\skip44
+\partial@page=\box27
+\last@line=\box28
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count93
+\c@finalcolumnbadness=\count94
+\last@try=\dimen108
+\multicolovershoot=\dimen109
+\multicolundershoot=\dimen110
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+\multicol@sort@counter=\count95
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/aliascnt.sty
+Package: aliascnt 2009/09/08 v1.3 Alias counters (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/carlisle/remreset.sty))
+\c@chapter=\count96
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 362.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 363.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 364.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 365.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 366.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 367.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 368.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 369.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 370.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 371.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 372.
+\tocchpnum=\dimen111
+\tocsecnum=\dimen112
+\tocsectotal=\dimen113
+\tocsubsecnum=\dimen114
+\tocsubsectotal=\dimen115
+\tocsubsubsecnum=\dimen116
+\tocsubsubsectotal=\dimen117
+\tocparanum=\dimen118
+\tocparatotal=\dimen119
+\tocsubparanum=\dimen120
+\@tempcntc=\count97
+\fnindent=\dimen121
+\c@@inst=\count98
+\c@@auth=\count99
+\c@auco=\count100
+\instindent=\dimen122
+\authrun=\box52
+\authorrunning=\toks14
+\tocauthor=\toks15
+\titrun=\box53
+\titlerunning=\toks16
+\toctitle=\toks17
+\c@theorem=\count101
+\c@case=\count102
+\c@conjecture=\count103
+\c@corollary=\count104
+\c@definition=\count105
+\c@example=\count106
+\c@exercise=\count107
+\c@lemma=\count108
+\c@note=\count109
+\c@problem=\count110
+\c@property=\count111
+\c@proposition=\count112
+\c@question=\count113
+\c@solution=\count114
+\c@remark=\count115
+\headlineindent=\dimen123
+)
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
-\@mathmargin=\skip43
+\@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -43,55 +149,58 @@ Package: amstext 2000/06/29 v2.01
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks14
-\ex@=\dimen103
+\@emptytoks=\toks18
+\ex@=\dimen124
 ))
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen104
+\pmbraise@=\dimen125
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count87
+\inf@bad=\count116
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count88
-\leftroot@=\count89
+\uproot@=\count117
+\leftroot@=\count118
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count90
-\DOTSCASE@=\count91
+\classnum@=\count119
+\DOTSCASE@=\count120
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
-\Mathstrutbox@=\box26
-\strutbox@=\box27
-\big@size=\dimen105
+\Mathstrutbox@=\box54
+\strutbox@=\box55
+\big@size=\dimen126
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count92
-\c@MaxMatrixCols=\count93
+
+
+Package amsmath Warning: Unable to redefine math accent \vec.
+
+\macc@depth=\count121
+\c@MaxMatrixCols=\count122
 \dotsspace@=\muskip10
-\c@parentequation=\count94
-\dspbrk@lvl=\count95
-\tag@help=\toks15
-\row@=\count96
-\column@=\count97
-\maxfields@=\count98
-\andhelp@=\toks16
-\eqnshift@=\dimen106
-\alignsep@=\dimen107
-\tagshift@=\dimen108
-\tagwidth@=\dimen109
-\totwidth@=\dimen110
-\lineht@=\dimen111
-\@envbody=\toks17
-\multlinegap=\skip44
-\multlinetaggap=\skip45
-\mathdisplay@stack=\toks18
+\c@parentequation=\count123
+\dspbrk@lvl=\count124
+\tag@help=\toks19
+\row@=\count125
+\column@=\count126
+\maxfields@=\count127
+\andhelp@=\toks20
+\eqnshift@=\dimen127
+\alignsep@=\dimen128
+\tagshift@=\dimen129
+\tagwidth@=\dimen130
+\totwidth@=\dimen131
+\lineht@=\dimen132
+\@envbody=\toks21
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
-)
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -125,17 +234,17 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count99
+\Gread@gobject=\count128
 ))
 (/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks19
+\KV@toks@=\toks23
 )
-\Gin@req@height=\dimen112
-\Gin@req@width=\dimen113
+\Gin@req@height=\dimen133
+\Gin@req@width=\dimen134
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
@@ -145,39 +254,35 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-
-LaTeX Warning: Unused global option(s):
-    [envcountsect,runningheads].
-
 (./Smoothness_Prob_NFS.aux)
 \openout1 = `Smoothness_Prob_NFS.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count100
-\scratchdimen=\dimen114
-\scratchbox=\box28
-\nofMPsegments=\count101
-\nofMParguments=\count102
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count103
-\MPscratchDim=\dimen115
-\MPnumerator=\count104
-\makeMPintoPDFobject=\count105
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count129
+\scratchdimen=\dimen135
+\scratchbox=\box56
+\nofMPsegments=\count130
+\nofMParguments=\count131
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count132
+\MPscratchDim=\dimen136
+\MPnumerator=\count133
+\makeMPintoPDFobject=\count134
+\everyMPtoPDFconversion=\toks25
 ) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -226,129 +331,38 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 41.
+LaTeX Font Info:    Try loading font information for U+msa on input line 36.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 41.
+LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
+Title too long for running head. Please supply
+a shorter form with \titlerunning prior to \maketitle
 
-LaTeX Warning: Citation `pollard' on page 1 undefined on input line 50.
-
-
-LaTeX Warning: Citation `teske' on page 1 undefined on input line 50.
-
-
-LaTeX Warning: Citation `rho_chal_1' on page 1 undefined on input line 50.
-
-
-LaTeX Warning: Citation `rho_chal_2' on page 1 undefined on input line 50.
-
-
-LaTeX Warning: Citation `rho_efficiency' on page 1 undefined on input line 50.
-
-
-LaTeX Warning: Citation `joux-lercier-smart-vercauteren06' on page 1 undefined 
-on input line 53.
-
-
-LaTeX Warning: Citation `joux-lercier-smart-vercauteren06' on page 1 undefined 
-on input line 53.
+Overfull \hbox (2.71866pt too wide) in paragraph at lines 42--43
+\OT1/cmr/m/n/12 In cryp-tog-ra-phy the \OT1/cmr/m/it/12 com-pu-ta-tional \OT1/c
+mr/m/n/12 be-haviour of par-tic-u-lar al-go-rithms
+ []
 
 [1
 
 {/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Citation `zajac' on page 2 undefined on input line 65.
+LaTeX Warning: Citation `FFS_rob' on page 2 undefined on input line 52.
 
 
-LaTeX Warning: Citation `dan_predicting_nfs' on page 2 undefined on input line 
-65.
+LaTeX Warning: Citation ` FFS_antoine' on page 2 undefined on input line 52.
 
 
-LaTeX Warning: Citation `FFS_rob' on page 2 undefined on input line 65.
+LaTeX Warning: Citation ` joux_imporved' on page 2 undefined on input line 52.
 
-
-LaTeX Warning: Citation `FFS_antoine' on page 2 undefined on input line 65.
-
-
-LaTeX Warning: Citation `joux_imporved' on page 2 undefined on input line 65.
-
-
-LaTeX Warning: Citation `joux-lercier-smart-vercauteren06' on page 2 undefined 
-on input line 68.
-
-[2]
-
-LaTeX Warning: Citation `lamacchia-odlyzko' on page 3 undefined on input line 8
-7.
-
-
-LaTeX Warning: Citation `hild-tene' on page 3 undefined on input line 93.
-
-
-LaTeX Warning: Citation `dan_psi_est' on page 3 undefined on input line 93.
-
-
-LaTeX Warning: Citation `krause' on page 3 undefined on input line 93.
-
-
-LaTeX Warning: Citation `hild-tene' on page 3 undefined on input line 93.
-
-
-LaTeX Warning: Citation `krause' on page 3 undefined on input line 93.
-
-
-LaTeX Warning: Citation `zajac' on page 3 undefined on input line 94.
-
-
-LaTeX Warning: Citation `joux-lercier-smart-vercauteren06' on page 3 undefined 
-on input line 95.
-
-
-LaTeX Warning: Citation `can-er-pom' on page 3 undefined on input line 95.
-
-[3]
-
-LaTeX Warning: Citation `lenstra-verheul' on page 4 undefined on input line 104
-.
-
-
-LaTeX Warning: Citation `lenstra01' on page 4 undefined on input line 104.
-
-
-LaTeX Warning: Citation `ECRYPT_key_sizes' on page 4 undefined on input line 10
-4.
-
-
-LaTeX Warning: Citation `joux-lercier-smart-vercauteren06' on page 4 undefined 
-on input line 104.
-
-
-LaTeX Warning: Citation `joux-lercier-smart-vercauteren06' on page 4 undefined 
-on input line 125.
-
-
-LaTeX Warning: Citation `koblitz-menezes05' on page 4 undefined on input line 1
-25.
-
-
-LaTeX Warning: Citation `towers' on page 4 undefined on input line 125.
-
-[4]
-
-LaTeX Warning: Citation `dan_psi_est' on page 5 undefined on input line 133.
-
-
-LaTeX Warning: Citation `joux-lercier-smart-vercauteren06' on page 5 undefined 
-on input line 140.
-
-
-Overfull \hbox (8.55647pt too wide) detected at line 143
+[2] [3] [4] [5] [6]
+Overfull \hbox (6.43294pt too wide) detected at line 137
 \OML/cmm/m/it/9 n\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 X[]; X[]; X[]; X[]\OT1/cmr/m/n
 /9 ) = \OML/cmm/m/it/9 A[]X[] \OMS/cmsy/m/n/9 ^^@ \OT1/cmr/m/n/9 2\OML/cmm/m/it
 /9 ABX[]X[] \OT1/cmr/m/n/9 + 9\OML/cmm/m/it/9 ABX[]X[]X[] \OMS/cmsy/m/n/9 ^^@ \
@@ -356,169 +370,175 @@ OT1/cmr/m/n/9 6\OML/cmm/m/it/9 ABX[]X[]X[] \OT1/cmr/m/n/9 + \OML/cmm/m/it/9 ABX
 [] \OT1/cmr/m/n/9 + \OML/cmm/m/it/9 B[]X[];
  []
 
-[5] <graphs/cumulative.pdf, id=38, 341.9187pt x 201.54538pt>
+<graphs/cumulative.pdf, id=34, 341.9187pt x 201.54538pt>
 File: graphs/cumulative.pdf Graphic file (type pdf)
 
 <use graphs/cumulative.pdf>
-Package pdftex.def Info: graphs/cumulative.pdf used on input line 148.
+Package pdftex.def Info: graphs/cumulative.pdf used on input line 142.
 (pdftex.def)             Requested size: 341.91785pt x 201.54488pt.
-
-
-LaTeX Warning: Citation `joux-lercier-smart-vercauteren06' on page 6 undefined 
-on input line 152.
-
-
-LaTeX Warning: Citation `R' on page 6 undefined on input line 156.
-
-
-LaTeX Warning: Citation `box-cox' on page 6 undefined on input line 156.
-
-[6 <./graphs/cumulative.pdf>]
-
-LaTeX Warning: Citation `dan_psi_est' on page 7 undefined on input line 169.
-
-
-LaTeX Warning: Citation `dan_imp' on page 7 undefined on input line 169.
-
-[7]
-
-LaTeX Warning: Citation `dan_imp' on page 8 undefined on input line 180.
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
-
+ [7] [8 <./graphs/cumulative.pdf>]
+Overfull \hbox (8.25847pt too wide) in paragraph at lines 155--156
+ \OT1/cmr/bx/n/12 How the cu-mu-la-tive dis-tri-bu-tion af-fects the smooth-nes
+s prob-
  []
 
 [9]
-Overfull \hbox (28.7701pt too wide) in paragraph at lines 187--200
- [] 
+Overfull \hbox (18.31474pt too wide) detected at line 164
+\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z \OMS/cmsy/m/n/12 2 \OT1/c
+mr/m/n/12 [(\OML/cmm/m/it/12 i \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1)\OML/cmm/
+m/it/12 a; ia\OT1/cmr/m/n/12 ]) = \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m
+/it/12 Z \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 ia\OT1/cmr/m/n/12 ) \OMS/cmsy/m/
+n/12 ^^@ \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Z \OMS/cmsy/m/n/12
+ ^^T \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 i \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1
+)\OML/cmm/m/it/12 a\OT1/cmr/m/n/12 ) = [] = []\OML/cmm/m/it/12 :
  []
 
-<graphs/multiple_tests_plot.pdf, id=60, 411.5375pt x 371.3875pt>
-File: graphs/multiple_tests_plot.pdf Graphic file (type pdf)
-
-<use graphs/multiple_tests_plot.pdf>
-Package pdftex.def Info: graphs/multiple_tests_plot.pdf used on input line 206.
-
-(pdftex.def)             Requested size: 329.23045pt x 297.1104pt.
- [10] [11 <./graphs/multiple_tests_plot.pdf>]
-
-LaTeX Warning: Citation `joux-lercier-smart-vercauteren06' on page 12 undefined
- on input line 217.
-
-
-LaTeX Warning: Citation `dan_predicting_nfs' on page 12 undefined on input line
- 218.
-
-
-LaTeX Warning: Citation `zajac' on page 12 undefined on input line 223.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
-
+[10]
+Overfull \hbox (45.39272pt too wide) detected at line 174
+\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 S[] \OT1/cmr/m/n/12 = 1) = 
+0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 0001699201 = []  []  \OML/cmm/m/it/12 P\OT1/
+cmr/m/n/12 (\OML/cmm/m/it/12 S[] \OT1/cmr/m/n/12 = 1) = 0\OML/cmm/m/it/12 :\OT1
+/cmr/m/n/12 00005777868\OML/cmm/m/it/12 :
  []
 
-
-Overfull \hbox (23.97276pt too wide) in paragraph at lines 229--247
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 251--252
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
  []
 
 [12]
-
-LaTeX Warning: Citation `joux-lercier-smart-vercauteren06' on page 13 undefined
- on input line 284.
-
-[13]
-
-LaTeX Warning: Citation `joux-lercier-smart-vercauteren06' on page 14 undefined
- on input line 286.
-
-No file Smoothness_Prob_NFS.bbl.
-[14] <graphs/CheckLineFit2.pdf, id=84, 505.89pt x 505.89pt>
-File: graphs/CheckLineFit2.pdf Graphic file (type pdf)
-
-<use graphs/CheckLineFit2.pdf>
-Package pdftex.def Info: graphs/CheckLineFit2.pdf used on input line 295.
-(pdftex.def)             Requested size: 354.12057pt x 354.12057pt.
-
-Overfull \hbox (9.12057pt too wide) in paragraph at lines 294--296
-[][] 
+Overfull \hbox (45.97392pt too wide) in paragraph at lines 181--194
+ [] 
  []
 
-<graphs/CheckLineFit4.pdf, id=85, 505.89pt x 505.89pt>
-File: graphs/CheckLineFit4.pdf Graphic file (type pdf)
+<graphs/multiple_tests_plot.pdf, id=64, 411.5375pt x 371.3875pt>
+File: graphs/multiple_tests_plot.pdf Graphic file (type pdf)
 
-<use graphs/CheckLineFit4.pdf>
-Package pdftex.def Info: graphs/CheckLineFit4.pdf used on input line 298.
-(pdftex.def)             Requested size: 328.82458pt x 328.82458pt.
- [15 <./graphs/CheckLineFit2.pdf>]
-Overfull \hbox (36.69139pt too wide) in paragraph at lines 300--315
-\OT1/cmr/m/n/10 Output from R: []
+<use graphs/multiple_tests_plot.pdf>
+Package pdftex.def Info: graphs/multiple_tests_plot.pdf used on input line 201.
+
+(pdftex.def)             Requested size: 288.07428pt x 259.96947pt.
+ [13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14 <./graphs/multiple_tests_plot.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 219--259
+
  []
 
 
-Overfull \hbox (0.9343pt too wide) in paragraph at lines 319--334
+Overfull \hbox (29.05827pt too wide) in paragraph at lines 219--259
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--259
+
+ []
+
+
+Overfull \hbox (4.20642pt too wide) in paragraph at lines 219--259
 []
  []
 
 
-Overfull \hbox (42.01671pt too wide) in paragraph at lines 319--334
-\OT1/cmr/m/n/10 When $\OML/cmm/m/it/10 N$ \OT1/cmr/m/n/10 is a ran-dom value ta
-kes val-ues from the range of the func-tion $\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 
-(\OML/cmm/m/it/10 X[]; X[]; X[]; X[]\OT1/cmr/m/n/10 ) =
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+[17] (./Smoothness_Prob_NFS.bbl
+Missing character: There is no â in font cmr9!
+Missing character: There is no € in font cmr9!
+Missing character: There is no ™ in font cmr9!
+ [18]
+Missing character: There is no â in font cmr9!
+Missing character: There is no € in font cmr9!
+Missing character: There is no ™ in font cmr9!
+) [19]
+<graphs/CheckLineFit2.pdf, id=96, 505.89pt x 505.89pt>
+File: graphs/CheckLineFit2.pdf Graphic file (type pdf)
+
+<use graphs/CheckLineFit2.pdf>
+Package pdftex.def Info: graphs/CheckLineFit2.pdf used on input line 276.
+(pdftex.def)             Requested size: 227.64839pt x 227.64839pt.
+
+<graphs/CheckLineFit4.pdf, id=97, 505.89pt x 505.89pt>
+File: graphs/CheckLineFit4.pdf Graphic file (type pdf)
+
+<use graphs/CheckLineFit4.pdf>
+Package pdftex.def Info: graphs/CheckLineFit4.pdf used on input line 278.
+(pdftex.def)             Requested size: 227.64839pt x 227.64839pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--295
+
  []
 
-[16 <./graphs/CheckLineFit4.pdf>]
-<graphs/delta_plot.pdf, id=106, 411.5375pt x 371.3875pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20 <./graphs/CheckLineFit2.pdf> <./graphs/CheckLineFit4.pdf>]
+Overfull \hbox (4.7425pt too wide) in paragraph at lines 299--314
+\OT1/cmr/m/n/12 the func-tion $\OML/cmm/m/it/12 n\OT1/cmr/m/n/12 (\OML/cmm/m/it
+/12 X[]; X[]; X[]; X[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 A[]X[] \OMS/cmsy/m/n
+/12 ^^@ \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ABX[]X[] \OT1/cmr/m/n/12 + 9\OML/cmm/
+m/it/12 ABX[]X[]X[] \OMS/cmsy/m/n/12 ^^@
+ []
+
+<graphs/delta_plot.pdf, id=115, 411.5375pt x 371.3875pt>
 File: graphs/delta_plot.pdf Graphic file (type pdf)
 
 <use graphs/delta_plot.pdf>
-Package pdftex.def Info: graphs/delta_plot.pdf used on input line 369.
+Package pdftex.def Info: graphs/delta_plot.pdf used on input line 349.
 (pdftex.def)             Requested size: 267.4962pt x 241.399pt.
- [17 <./graphs/delta_plot.pdf>]
-(./Smoothness_Prob_NFS.aux)
 
-LaTeX Warning: There were undefined references.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- ) 
+ [21]
+[22 <./graphs/delta_plot.pdf>] (./Smoothness_Prob_NFS.aux) ) 
 Here is how much of TeX's memory you used:
- 2594 strings out of 493488
- 34571 string characters out of 3141326
- 95203 words of memory out of 3000000
- 5852 multiletter control sequences out of 15000+200000
- 13702 words of font info for 53 fonts, out of 3000000 for 9000
+ 2988 strings out of 493488
+ 39307 string characters out of 3141326
+ 108577 words of memory out of 3000000
+ 6230 multiletter control sequences out of 15000+200000
+ 13160 words of font info for 50 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,9n,23p,23438b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
-usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/
-local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/lo
-cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loca
-l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
-texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/te
-xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texl
-ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive
-/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/20
-12/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2012/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2012/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2012/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2012/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2012/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2012/texmf-dist/f
-onts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Smoothness_Prob_NFS.pdf (17 pages, 458613 bytes).
+ 38i,10n,23p,23438b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive
+/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/
+2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/20
+12/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/201
+2/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2012
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2012/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2012/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2012/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2012/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2012/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2012/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2012/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2012/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2012/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/p
+ublic/amsfonts/symbols/msbm10.pfb>
+Output written on Smoothness_Prob_NFS.pdf (22 pages, 432748 bytes).
 PDF statistics:
  184 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
+ 130 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

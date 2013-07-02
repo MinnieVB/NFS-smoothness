@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Smoothness_Prob_NFS.aux
+White space in argument---line 10 of file Smoothness_Prob_NFS.aux
+ : \citation{FFS_rob,
+ :                    FFS_antoine, joux_imporved}
+I'm skipping whatever remains of this command
+The style file: plain.bst
+Database file #1: smoothness.bib
+Warning--I'm ignoring rho_efficiency's extra "journal" field
+--line 38 of file smoothness.bib
+Warning--string name "jnt" is undefined
+--line 133 of file smoothness.bib
+Warning--string name "jtnb" is undefined
+--line 194 of file smoothness.bib
+Repeated entry---line 317 of file smoothness.bib
+ : @article{pollard
+ :                 ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "FFS_rob"
+Warning--to sort, need author or key in ECRYPT_key_sizes
+Warning--there's a number but no volume in rho_chal_2
+Warning--empty journal in can-er-pom
+Warning--empty journal in hild-tene
+Warning--empty publisher in R
+You've used 21 entries,
+            2118 wiz_defined-function locations,
+            636 strings with 7729 characters,
+and the built_in function-call counts, 7871 in all, are:
+= -- 747
+> -- 426
+< -- 11
++ -- 170
+- -- 146
+* -- 557
+:= -- 1282
+add.period$ -- 63
+call.type$ -- 21
+change.case$ -- 132
+chr.to.int$ -- 0
+cite$ -- 26
+duplicate$ -- 276
+empty$ -- 589
+format.name$ -- 146
+if$ -- 1661
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 16
+newline$ -- 104
+num.names$ -- 48
+pop$ -- 158
+preamble$ -- 1
+purify$ -- 112
+quote$ -- 0
+skip$ -- 226
+stack$ -- 0
+substring$ -- 434
+swap$ -- 81
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 82
+warning$ -- 5
+while$ -- 70
+width$ -- 23
+write$ -- 226
+(There were 2 error messages)

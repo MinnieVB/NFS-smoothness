@@ -1,9 +1,9 @@
-\documentclass[a4paper, 10pt, envcountsect, runningheads]{article}
-\usepackage{amsmath, amsfonts, url, amssymb, graphics} %cite, bbm, amsbsy, listings, makeidx}
+\documentclass[a4paper, 12pt, envcountsect, runningheads]{llncs}
+\usepackage{amsmath, amsfonts, url, amssymb, graphics} 
 \usepackage{graphicx, color}
 \pagestyle{plain}
 \setcounter{page}{1}
-%\pagestyle{headings}
+
 \newcommand{\F}{{\mathbb F}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -16,28 +16,23 @@
 \DeclareMathOperator{\ord}{ord}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Res}{Res}
-% Theorem definitions
-%\newtheorem{alg}[theorem]{Algorithm}{\bfseries}{\rmfamily}
-%\newtheorem{defn}[theorem]{Definition}{\bfseries}{\rmfamily}
-%\newtheorem{rem}[theorem]{Remark}{\bfseries}{\rmfamily}
-%\newtheorem{ex}[theorem]{Example}{\bfseries}{\rmfamily}
-%\newtheorem{fact}[theorem]{Fact}{\bfseries}{\rmfamily}
-%\newtheorem{quest}[theorem]{Question}{\bfseries}{\rmfamily}
-%\newtheorem{prop}[theorem]{Proposition}{\bfseries}{\itshape}
-%\newtheorem{lem}[theorem]{Lemma}{\bfseries}{\itshape}
-%\newtheorem{cor}[theorem]{Corollary}{\bfseries}{\itshape}
+
 \numberwithin{figure}{section}
 \numberwithin{equation}{section}
 \begin{document}
 \title{A note on the behaviour of the NFS in the medium prime case: Smoothness of Norms}
-\author{Naomi Benger, %\inst{1}
-%\and 
-Manuel Charlemagne}%\inst{1}}
-%\institute{
-%Adelaide \\
-%\email {naomi.benger@adelaide.edu.au}\and
-%china\\
-%\email{charlem@sjtu.edu.cn}}
+
+\author{Naomi Benger\inst{1}
+\and Manuel Charlemagne\inst{2}\thanks{Founded by the National Natural Science Foundation of China (Grant 61133014) and the State Key Laboratory of Mathematical Engineering and Advanced Computing.}
+\and Kefei Chen\inst{3}}
+\institute{
+University of Adelaide, Australia\\
+\email {naomi.benger@adelaide.edu.au}\and
+Shanghai Jiao Tong University, China\\
+\email{charlem@sjtu.edu.cn}\and
+Hangzhou Normal University, China\\
+\email {chen-kf@cs.sjtu.edu.cn}}
+
 \maketitle
 \begin{abstract}
 During an ongoing examination of the behaviour, in practice, of the Number Field Sieve (NFS) in the medium prime case we have noticed numerous interesting patterns. In this paper we present findings on run-time observations of an aspect of the sieving stage. The contributions of these observations to the computational mathematics community are twofold: firstly, they bring us a step closer to understanding the true practical effectiveness of the algorithm and secondly, they enabled the development of a test for the effectiveness of the polynomials used in the NFS. The results of this work are of particular interest to cryptographers: the run-time of the NFS determines directly the security level of some discrete logarithm problem based protocols, such as those arising in pairing-based cryptography.
@@ -54,14 +49,6 @@ There are various known algorithms for solving the DLP, the most appropriate dep
 
 Little is known about the practical effectiveness of the NFS in the medium prime case which limits our understanding of the security of PBC protocols. In this work we examine one aspect of this NFS version.
 
-
-
-%We are examining aspects of the execution of this NFS; there are two motivating factors for examining this particular context: 
-%\begin{enumerate}
-%\item It has been indicated that the behaviour of the NFS used for factorising varies widely depending on the particular implementation and that the asymptotic complexity rarely gives a good indication of how the algorithm will perform in practice \cite{zajac,dan_predicting_nfs}; this justifies a closer examination of other NFS versions.
-%\item Many Identity-based protocols use cryptographic pairings and given that it is desirable for such protocols to be implemented on small devices, such as smart cards and other embedded devices, it is important to have a more accurate measure of the required parameter sizes for a particular security level. In this particular setting, simply taking a larger field to compensate for ``unknown capabilities'' of the NFS is not a viable option, due to limited memory and processing power, so we need to better understand the capabilities of the NFS to make more precise security estimates.
-%\end{enumerate}
-
 The ultimate goal of this continuing project is to increase the general understanding of the behaviour of the NFS. The motivation for this work is threefold: firstly, the behaviour of other NFS versions is known to vary widely \cite{zajac,dan_predicting_nfs}. Secondly, implementation of cryptographic protocols on small devices requires accurate security estimates as memory and processing power are limited. Finally, recent advances in solving the DLP in binary fields \cite{FFS_rob, FFS_antoine, joux_imporved} will promote the use of medium prime fields in PBC, over binary fields; it is necessary to investigate the problem in this increasingly utilised setting.
 
 
@@ -69,22 +56,31 @@ The analysis of the NFS algorithm in \cite{joux-lercier-smart-vercauteren06} is 
 The remainder of this paper is organised as follows: In section \ref{s:nfs} we give a brief introduction to the NFS. In section \ref{s:smooth} we examine one aspect of the theoretical complexity analysis, which solidifies our motivation and introduce the particular aspect of the NFS that this work focuses on. In section \ref{s:context} we explain our experiment setting and the process of our investigation, presenting the results of this undertaking in section \ref{s:results}. Conclusions and open problems are presented in section \ref{s:conclusion}.
 %================================================================ 
 \subsection*{Acknowledgments}
-The authors thank Mike Scott, Rob Granger and Kefei Chen for their continual advice and support, Nigel Bean and Jono Tuke for helpful discussions.
+The authors thank Mike Scott and Rob Granger for their continual advice and support, Nigel Bean and Jono Tuke for helpful discussions.
 %================================================================
 
 \section{NFS in a nutshell} 
 \label{s:nfs}
-In this section we give a brief introduction to the NFS. The NFS can be considered a sequence of stages for which we assess the complexity separately. The two main parts of the NFS are the sieving stage and the linear algebra stage. Suppose we wish to solve a DLP instance in the finite field $\F_{p^k}.$
-\subsection*{Sieving}
-\label{ss:sieving}
-The goal of the sieving stage is to find a set of linear relations in the logarithms of a fixed set of elements. This is done by selecting two isomorphic representations of a number field of dimension $k$ over $\Q$, say $\mathcal{K}_{1}$ and $\mathcal{K}_{2}$, and fixing a subset of elements in each of the representations, called the \textit{Factor Base}, denoted by $\mathcal{F}_{1}$ and $\mathcal{F}_{2}$ respectively. The factor bases contain the ideals of small norm, bounded by a {\em smoothness bound} $\mathcal{B}_{i}$, $i=[1,2]$.
-Field elements are then `sieved' to find pairs $(\alpha,\beta)$, $\alpha\in\mathcal{K}_{1}$ and $\beta\in\mathcal{K}_{2}$, with $\alpha\cong\beta$, and $\alpha$ and $\beta$ {\em smooth} over their respective factor bases; that is, $\alpha$ and $\beta$ can be completely decomposed into a product of elements from their respective factor bases. Such pairs are called \textit{doubly smooth}. The sieving continues until enough relations $$\alpha=\prod_{\gamma_{i}\in\mathcal{F}_{1}}\gamma_{i}^{a_{i}}\cong\prod_{\delta_{j}\in\mathcal{F}_{2}}\delta_{j}^{b_{j}}=\beta$$ are found, that is, at least the sum of the number of elements in the factor bases.
-These relations are converted to linear equations in the logarithms of the factor base elements by taking the discrete logarithms of each side with respect to fixed (isomorphic) elements in each representation.
-In the particular variation of the NFS we are concerned with here, the two number fields are constructed by adjoining to $\Q$ roots $\theta_1$ and $\theta_2$ of two different polynomials ($f_1$ and $f_2$ respectively, considered in $\Z[x]$) which have common root modulo $p$. The elements of these number fields are thus considered as polynomials of degree $t<n$ in $\theta_i$. To compute the norm of an element $a=a(\theta_i)$ in $\mathcal{K}_i$ we consider $a$ as a polynomial in $x$ and take the resultant of $a(x)$ with $f_i(x).$
-\subsection*{Linear Algebra}
-\label{ss:LinAlg}
-The system of linear equations obtained in the sieving stage is solved using linear algebra to find the logarithms of the elements in the factor bases.
-Solving the linear equations is no trivial task. Though the matrix of equations is originally sparse, after only a few operations it becomes congested. There are a few methods for reducing this matrix and solving for the unknown logarithms: Lanczos algorithm, Wiederman algorithm and structured Gaussian elimination  (all with complexity $\leq L(1/3)$), some algorithms use a combination of these methods \cite{lamacchia-odlyzko}. 
+In this section we give a brief introduction to the NFS. The NFS can be considered a sequence of stages for which we assess the complexity separately. The two main parts of the NFS are the sieving stage and the linear algebra stage, these are followed by a descent stage. Suppose we wish to solve a DLP instance in the finite field $\F_{p^n}.$
+
+In the sieving stage we aim to construct a set of linear equations in the logarithms of ``small'' elements. This is done using two number fields, say $\mathcal{K}_{1}$ and $\mathcal{K}_{2}$, both of which contain $\F_{p^n}$ as a subfield. We sieve through the elements of these fields looking for ``doubly-smooth'' pairs. Two elements form a {\em pair} if the mappings from their respective number fields to $\F_{p^n}$ maps them to the same element. An element is {\em smooth} if it can be written as the product of {\em small} elements, elements with norms a prime number below a given bound; the pair is {\em doubly-smooth} if both are smooth in their respective number fields. 
+
+The system of linear equations is solved in the linear algebra stage, finding the discrete logarithms of the small elements. In the descent stage the specific element of interest is written as a product of small elements and thus its discrete logarithm is found. 
+
+In this work we examine the complexity of the sieving stage. For the NFS variation relevant to the PBC context, the two number fields are constructed as $\mathcal{K}_{i}=\Q[\theta_i]$ for $i\in\{1,2\}$. The element $\theta_i$ is a zero of the irreducible polynomial $f_i(x)$ with integer coefficients such that $n\mid\deg(f_i)$; $f_1$ and $f_2$ have a common root modulo $p$. The elements of these number fields are thus considered as polynomials of degree $t<n$ in $\theta_i$. To compute the norm of an element $a=a(\theta_i)$ in $\mathcal{K}_i$ we consider $a$ as a polynomial in $x$ and take the resultant of $a(x)$ with $f_i(x).$ To find doubly-smooth pairs we look at the factorisation of the norms of the elements.
+
+
+
+%\subsection*{Sieving}
+%\label{ss:sieving}
+%The goal of the sieving stage is to find a set of linear relations in the logarithms of a fixed set of elements. This is done by selecting two isomorphic representations of a number field of dimension $k$ over $\Q$, say $\mathcal{K}_{1}$ and $\mathcal{K}_{2}$, and fixing a subset of elements in each of the representations, called the \textit{Factor Base}, denoted by $\mathcal{F}_{1}$ and $\mathcal{F}_{2}$ respectively. The factor bases contain the ideals of small norm, bounded by a {\em smoothness bound} $\mathcal{B}_{i}$, $i=[1,2]$.
+%Field elements are then `sieved' to find pairs $(\alpha,\beta)$, $\alpha\in\mathcal{K}_{1}$ and $\beta\in\mathcal{K}_{2}$, with $\alpha\cong\beta$, and $\alpha$ and $\beta$ {\em smooth} over their respective factor bases; that is, $\alpha$ and $\beta$ can be completely decomposed into a product of elements from their respective factor bases. Such pairs are called \textit{doubly smooth}. The sieving continues until enough relations $$\alpha=\prod_{\gamma_{i}\in\mathcal{F}_{1}}\gamma_{i}^{a_{i}}\cong\prod_{\delta_{j}\in\mathcal{F}_{2}}\delta_{j}^{b_{j}}=\beta$$ are found, that is, at least the sum of the number of elements in the factor bases.
+%These relations are converted to linear equations in the logarithms of the factor base elements by taking the discrete logarithms of each side with respect to fixed (isomorphic) elements in each representation.
+%In the particular variation of the NFS we are concerned with here, the two number fields are constructed by adjoining to $\Q$ roots $\theta_1$ and $\theta_2$ of two different polynomials ($f_1$ and $f_2$ respectively, considered in $\Z[x]$) which have common root modulo $p$. The elements of these number fields are thus considered as polynomials of degree $t<n$ in $\theta_i$. To compute the norm of an element $a=a(\theta_i)$ in $\mathcal{K}_i$ we consider $a$ as a polynomial in $x$ and take the resultant of $a(x)$ with $f_i(x).$
+%\subsection*{Linear Algebra}
+%\label{ss:LinAlg}
+%The system of linear equations obtained in the sieving stage is solved using linear algebra to find the logarithms of the elements in the factor bases.
+%Solving the linear equations is no trivial task. Though the matrix of equations is originally sparse, after only a few operations it becomes congested. There are a few methods for reducing this matrix and solving for the unknown logarithms: Lanczos algorithm, Wiederman algorithm and structured Gaussian elimination  (all with complexity $\leq L(1/3)$), some algorithms use a combination of these methods \cite{lamacchia-odlyzko}. 
 %================================================================
 \section{Smoothness probability of norms}
 \label{s:smooth}
@@ -93,9 +89,7 @@ Denote by $\Psi(x,y)$ the number of integers $\leq x$ with no prime factor excee
 In \cite{hild-tene} a comprehensive survey of estimates for $\Psi(x,y)$ is given; in the more recent \cite{dan_psi_est} we are presented with a method for computing $\Psi$ within an arbitrarily tight bound. The results of \cite{krause} are extensions of some of the theorems in \cite{hild-tene} to the context of algebraic numbr fields -- the relevant case for the NFS. The formul{\ae} for calculating the probability is directly obtained from the $\Psi_K(x,y)$ estimate (number of integral ideals with norm $< x$, all of whose prime divisors have norm $< y$ in a number field $K$) \cite[Satz 3]{krause} but computation of this estimate is not feasible in practice and therefore can not be used in the complexity analysis of the NFS algorithm. The computation relies on knowledge of the class number of $K$ and a result of the Dedekind Zeta function, both of which are known to be hard to compute in practice.
 This presents a major set back when trying to estimate the computational behaviour of the NFS: we are unable to compare the behaviour of an NFS instance to the estimate. Indeed, the variability of the probability of smoothness of norms in given number fields (that is, for a given choice of $f_1$ and $f_2$) could be used to explain some of the behaviour noticed by Zajac \cite{zajac}; thus the ability to compute this probability would aid polynomial selection. 
 The smoothness probability estimate for integers used for the complexity analysis in \cite{joux-lercier-smart-vercauteren06} is from a corollary \cite[page 15]{can-er-pom}; this formula is the most appropriate choice, given that the algorithm is presented for extension degrees $k$ and primes $p$ both tending to infinity. 
-%The probability estimate formula is `compacted' for use in the complexity analysis -- as is common practice -- which poses further issues when trying to estimate the run-time for a particular context. Much information is absorbed into an $O(1)$ or $O(k)$ term, thus obscuring factors which have a substantial effect on the run time of the algorithm. A concrete example of this: in \cite{joux-lercier-smart-vercauteren06} the authors specify that a constant factor of $6/\pi^2$ from the original estimate is absorbed into the $L$-notation for the asymptotic complexity. This can not be neglected when assessing the practical behaviour of the sieving stage, this factor of $\sim 2/3$ means that we would overestimate the number of doubly-smooth relations found by $\% 50$, assuming we will find $m$ relations when in fact we would only have $\frac{2}{3}m$ after a given number of trials, this stage would have to run $\% 50$ longer then expected to reach completion.
 
-%As a result of these practices, the theoretical complexity is not an accurate estimate of the computational behaviour; this issue is not isolated to this NFS algorithm, similar techniques are commonplace and the problem of the gap between theoretical complexity and computational behaviour was noted in \cite{dan_predicting_nfs} for the NFS used for factorisation. The main result presented in section \ref{s:results} of this work is the examination of the computational behaviour in this aspect of the NFS.
 %================================================================
 \section{Analysis Context}
 \label{s:context}
@@ -143,11 +137,11 @@ The reason for focussing on the cumulative distribution is that the estimates fo
 The resultant of polynomials of the form $Ax^6+B$ with $X_0+X_1 x +X_2 x^2$ (the MNT6 setting) is given by the evaluation of the function {\small{$$n(X_0,X_1,X_2,X_3)=A^2 X_0^6 - 2 A B X_0^3 X_2^3 + 9 A B X_0^2 X_1^2 X_2^2 - 6 A B X_0 X_1^4 X_2 + ABX_1^6 + B^2 X_2^6,$$}} where $A=1$ for $f_1$. Such a number clearly has much structure and numbers generated using this equation will have a distribution very different from the uniform, which is used in the complexity analysis. Trialling various theoretical methods to determine the probability distribution of this $N$ from this function of uniform random variables was unfruitful due to the complexity and large number of variables. We therefore generated empirical data to directly determine the cumulative distribution. 
 In the following graph we see the cumulative distribution function as generated for the norms for the MNT6 case. Intuitively, we expect a ``clumping'' effect in the centre of the probability distribution of the norms due to the fact that we are repeatedly summing 6th powers of uniform variables from a bounded interval, which will increase the proportion (and therefore probability) of the low to middle range norm values. The result of this clumping effect in the probability distribution translates to a very steep cumulative distribution function over the low and middle range (plentiful) values, which tapers down to very small slope over the larger (rarer) values. This is exactly the result that the data presented. In figure \ref{fig:comp} we see the cumulative distribution function as generated for the norms for the MNT6 case compared with the uniformly distributed variable.
 It is clear that this central clumping as discussed above results in the ``mid-range'' values being more probable in the norm distribution than for the integers: The number of integers in a particular interval increases constantly with the upper bound of the interval whereas the norms have a higher concentration in the mid-range of the same interval, a direct result of the range of the variables $X_0,X_1,X_2$. 
-\begin{center}
+%\begin{center}
 \begin{figure}\label{fig:comp}
 \includegraphics[scale=1]{graphs/cumulative}\caption{Comparison of the cumulative distribution of norms and uniform integers in the MNT6 case. This particular graph generated using $p=1125909838976401$ ($s=349879$).}
 \end{figure}
-\end{center}
+%\end{center}
 Another interesting observation we made, by varying the size of $p$ for more tests, is that the distribution of the norms depends only on $k$ and $t$. The size of $p$ only dictates the \textit{placement} of the distribution %, as it directly determines the interval from which the variables $X_0,X_1,X_2$ are taken, 
 not the \textit{shape}. This is not surprising given that the shape of the elements of interest are the output of the above function $n(X_0,\ldots,X_t)$, a degree $k$ function in $t$ variables, with constants $A$ and $B$ being altered with each function. For this reason we use a smaller example case than would be used in practice: the MNT6 setting and a 50-bit prime (with $k=6$ and $t=2$). This allows us to perform more thorough and varied tests. We recalculated the sieving bound to correspond with the new field size, following the instructions in \cite{joux-lercier-smart-vercauteren06}, but preserved the value for $t$.
 
@@ -185,7 +179,7 @@ The probability above is an {\em optimistic-case} probability; we have made the 
 $p=1125909838976401$
 \begin{center}
 \begin{tabular}{l|ccc}
-polynomial & \# smooth & $r=$ smooth rate & factor difference from $\hat{r}$ ($\beta$)\\
+polynomial & \# smooth & $r=$ smooth rate & $\beta=$factor difference from $\hat{r}$\\
 \hline
 $f=35374332x^6+11$ &633&0.0001266&0.7451\\
 &&&\\
@@ -201,14 +195,12 @@ $f=1069214x^6+37$ &1320&0.0002640&1.5537
 \vspace{0.5cm}
 The values of $\beta$ in the fourth column can be compared with the value $0.33\hat{3}$ which is used in the complexity analysis. We see the second, fourth and fifth polynomials produce smooth norms at a rate over \%50 faster than the prediction (and so $4.5$ times the estimate used in the complexity analysis). There are, in fact, numerous polynomials for which the rate of smooth norm collection is higher than the predicted rate and we were able to find many examples, though the average case differs from $\hat{r}$ by a factor of $0.5526999$ (i.e. the mean value of $\beta$) shown in Figure \ref{fig:mults}. The long tail of the graph distorts the standard deviation, but examining the quantiles, half of the values are between $0.28$ and $0.71$ with $1$ being near the end of the main peak which is why we use the term {\em optimistic-case} probability. In figure \ref{fig:mults} the value given by the asymptotic complexity is shown and it is indeed the the value which occus with the highest probability, but it is also clear that a much larger proportion of the cases perform significantly better than this case. We see clearly now that considering only the complexity analysis in this case would lead to a misleading evaluation of the rate of smooth relation collection for a given pair of polynomials: the polynomials may exhibit smooth norms at a higher rate than the complexity analysis suggests, but still at a rate well below the average, this could lead to less efficient pairs of polynomials being selected.
 
-\begin{center}
-\begin{figure}\label{fig:mults}
-\includegraphics[scale=0.80]{graphs/multiple_tests_plot}\caption{The probability density function of the multiple by which the rate of smooth relation collection differes from the estimated rate.}
-\end{figure}
-\end{center}
-
 The goal of an implementer of the NFS is to find a polynomial {\em pair} such that the rate of smooth relation collection in each number field is as close to $\hat{r}$ as possible: that is, we want to find pairs $(f_1,f_2)$ such that $r_1\cdot r_2\approx\hat{r}^2$ ($r_i=$ smooth rate of norms computed using $f_i$, $i\in\{1,2\}$); this is no straightforward task. We denote $r_1\cdot r_2=\delta\hat{r}^2$ and recognise that the possible values for $\delta$ will be the product of independently selected values from the distribution of $\beta$ and will therefore have mean value $\beta^2$. From our empirical data we computed $0.3320898$ very close to the predicted $0.3062898=0.5526999^2$ (graph of distribution in appendix \ref{ap:mults}). We can compare this to the estimate used in the complexity analysis which would give a value of $\delta=1/9=0.11\bar{1}$. Even if we use the median of this distribution, $0.2118865$, to remove some of the influence of the large, rare cases, it is still approximately twice the probability used in the complexity analysis and reflects more closely he observed behaviour.
-\newpage
+%\begin{center}
+\begin{figure}\label{fig:mults}
+\includegraphics[scale=0.7]{graphs/multiple_tests_plot}\caption{The probability density function of the multiple by which the rate of smooth relation collection differs from the estimated rate.}
+\end{figure}
+%\end{center}
 \subsection{Polynomial Selection Test}
 \label{ss:poly_test}
 The mean value of $\delta$ gives us the benchmark to aim to obtain, or improve on, when selecting our polynomials for the NFS. For a given instance of the DLP in a finite field $\F_{p^k}$ we perform the following test before launching the NFS sieving stage:
@@ -223,9 +215,8 @@ In step 4 by large enough we want to find $\hat{\delta}\geq0.3320898$ (the mean 
 This differs to how the results in \cite{zajac} would be used, we have given a benchmark to compare the rate of smooth norm collection against, whereas previous methods would have required the generation of numerous pairs of polynomials to mutually compare the rate of smooth relation collection. Thus, our method results in fewer tests necessary to distinguish if a pair of polynomials is performing at least as well as the average case.
 
 To illustrate, we have generated various $f_1$ and $f_2$ pairs for our example case of MNT6 with prime around 50 bits. Our experiments resulted in polynomial pairs for which smooth norms occurred at a much higher rate than others. The following tables show some example cases of polynomial pairs for MNT6 case:\\
-
-$p=1125909838976401$
-\begin{center}
+\newpage
+\noindent$p=1125909838976401$\\\\
 \begin{tabular}{l|cccc}
 polynomial pair & \# smooth & rate smooth & rate double smooth & $\hat{\delta}$\\
 \hline
@@ -243,17 +234,9 @@ $f_2=136231362x^6+17$ &208&4.16E-5&&\\
 &&&&\\
 $f_1=1069214x^6+37$ &1320&2.64E-4&4.9632E-9&0.1719\\
 $f_2=x^6+1053025717$ &94&1.88E-5&&
-\end{tabular}
-\end{center}
-\vspace{0.5cm}
-%Interestingly, though the same value $i=11$ was used to construct the first three polynomial pairs the rate of smooth relation collection is vastly different. Though the rate is comparable in the number fields defined using the $f_2$, using the first and third pairs we found smooth relations at less than half the rate of the second pair, for which the value $\hat{\delta}=0.4062$ exceeds the mean value of $0.3320898$.\\
-
-Interestingly, these examples highlight that simply taking a small value for $i$ ($11$ in this case) does not ensure a good polynomial pair, the rate of smooth relation collection for the first three polynomial pairs is vastly different. Though the rate is comparable in the number fields defined using the $f_2$, using the first and third pairs we found smooth relations at less than half the rate of the second pair, for which the value $\hat{\delta}=0.4062$ exceeds the mean value of $0.3320898$.\\
-
-
-$p=1126169969103937$
-\vspace{0.5cm}
-\begin{center}
+\end{tabular}\\\\
+Interestingly, these examples highlight that simply taking a small value for $i$ ($11$ in this case) does not ensure a good polynomial pair, the rate of smooth relation collection for the first three polynomial pairs is vastly different. Though the rate is comparable in the number fields defined using the $f_2$, using the first and third pairs we found smooth relations at less than half the rate of the second pair, for which the value $\hat{\delta}=0.4062$ exceeds the mean value of $0.3320898$.\\\\
+$p=1126169969103937$\\\\
 \begin{tabular}{l|ccc}
 polynomial pair & \# smooth & $r=$est. double smooth rate & $\hat{\delta}$\\
 \hline
@@ -272,8 +255,6 @@ $f_2=53956877x^6+22$ &585&&\\
 $f_1=x^6+27201934$ &251&6.68664E-9&0.2316\\
 $f_2=41400364x^6+39$ &666&&\\
 \end{tabular}
-\end{center}
-\vspace{0.5cm}
 Again in this table we see great variation in the rate of smooth element collection in the first three cases, for which the same value $i=13$ was used to construct the polynomial pairs. For this prime the value of $\hat{\delta}=0.3515$ slightly exceeds the mean value $0.3320898$.
 
 \section{Conclusion and Open Problems}
@@ -292,12 +273,12 @@ This work covers the initial progress in the examination of the NFS sieving stag
 \appendix
 \section{MNT6 output}\label{A:MNT6_output}
 Diagram from Box-Cox method clearly indicating that for the MNT6 case that $\lambda=6$.\\
-\includegraphics[scale=0.7]{graphs/CheckLineFit2}\label{fig:boxcox}
-
+\includegraphics[scale=0.45]{graphs/CheckLineFit2}\label{fig:boxcox}\\
 Comparison of the experimental data and the fitted line.\\
-\includegraphics[scale=0.65]{graphs/CheckLineFit4}\label{fig:linefit}
+\includegraphics[scale=0.45]{graphs/CheckLineFit4}\label{fig:linefit}
+
 \subsection{Output of the linear model}\label{A:diagrams}
-Output from R:
+Output from R:\\\\
 \begin{tabular}{lcccc}
 Residuals:&&&&\\
 Min & 1Q & Median & 3Q & Max\\ 
@@ -307,15 +288,14 @@ Coefficients:&&&&\\
 					& Estimate & Std. Error & t value & $Pr(>|t|)$    \\
 (Intercept) & $-1.868e-05$ &  $1.701e-07$  &  $-109.8$ & $< 2e-16$\\
 x          &  $2.171e-0106$ & $1.331e-112$ & $1630932.3$ & $< 2e-16$\\
-\end{tabular}
-%Signif. codes:  0 ?***? 0.001 ?**? 0.01 ?*? 0.05 ?.? 0.1 ? ? 1 
+\end{tabular} \\
 Residual standard error: 0.0002061 on 1999998 degrees of freedom\\
 Multiple R-squared:\quad 1,\quad Adjusted R-squared:\quad 1 \\
 F-statistic: $2.66e+12$ on 1 and 1999998 DF,  p-value: $< 2.2e-16$
 
 
 \subsection{MNT6 100-quantiles}\label{A:MNT100quantiles}
-{\tiny{
+{\small{
 \begin{tabular}{cccccccccc}
 $a_0=$71058 &96343& 98717&100100&101069&101816&102434&103022&103837&104597\\
 $a_{10}=$105289&105918&106496&107028&107524&107984&108412&108814&109192&109551\\
@@ -329,8 +309,8 @@ $a_{80}=$119140&119224&119306&119386&119465&119544&119622&119698&119775&119850\\
 $a_{90}=$119925&119999& 120073& 120144& 120215& 120286&120356&120424&120493&120561\\
 $a_{100}=$120628&&&&&&&&&\\
 \end{tabular}
-}}
-When $N$ is a random value takes values from the range of the function $n(X_0,X_1,X_2,X_3)=A^2 X_0^6 - 2 A B X_0^3 X_2^3 + 9 A B X_0^2 X_1^2 X_2^2 - 6 A B X_0 X_1^4 X_2 + ABX_1^6 + B^2 X_2^6$ where $X_i$ are uniformly distributed discrete random variables in the interval $[0,349879]$ then the above values are such that for $N=n$, $P(n\in[a_i,a_{i+1}])=0.01$ for $i\in[0,99]$.
+}}\\
+When $N$ is a random variable which takes values from the range of the function $n(X_0,X_1,X_2,X_3)=A^2 X_0^6 - 2 A B X_0^3 X_2^3 + 9 A B X_0^2 X_1^2 X_2^2 - 6 A B X_0 X_1^4 X_2 + ABX_1^6 + B^2 X_2^6$ where $X_i$ are uniformly distributed discrete random variables in the interval $[0,349879].$ The above values are such that for $N=n$, $P(n\in[a_i,a_{i+1}])=0.01$ for $i\in[0,99]$.
 
 %\section{Norm Formul{\ae} for other families}\label{A:other_fams}
 %\subsection*{BN}
