@@ -6,7 +6,7 @@
 \bibitem{rho_efficiency}
 S.~Bai and R.~P. Brent.
 \newblock On the efficiency of pollard’s rho method for discrete logarithms.
-\newblock {\em Australian Computer Society}, pages 125--131, 2008.
+\newblock {\em CATS}, pages 125--131, 2008.
 
 \bibitem{rho_chal_1}
 D.~V. Bailey, B.~Baldwin, L.~Batina, D.~J. Bernstein, P.~Birkner, J.~W. Bos,
@@ -52,18 +52,38 @@ G.E.P. Box and D.R. Cox.
 \bibitem{can-er-pom}
 E.~R. Canfield, P.~{Erd{\H{o}}s}, and C.~Pomerance.
 \newblock On a problem of {Oppenheim} concerning {``Factorisatio Numerorum"}.
-\newblock 17:1--28, 1983.
+\newblock {\em Journal of Number Theory}, 17:1--28, 1983.
+
+\bibitem{FFS_rob1}
+Faruk G\"olo\u{g}lu, Robert Granger, Gary McGuire, and Jens Zumbr\"agel.
+\newblock On the function field sieve and the impact of higher splitting
+  probabilities: Application to discrete logarithms in $\mathbb{F}_{2^{1971}}$
+  and $\mathbb{F}_{2^{3164}}$.
+\newblock Cryptology ePrint Archive, Report 2013/074, 2013.
+\newblock To appear at Crypto 2013.
+
+\bibitem{FFS_rob2}
+Faruk G\"olo\u{g}lu, Robert Granger, Gary McGuire, and Jens Zumbr\"agel.
+\newblock Solving a $6120$-bit dlp on a desktop computer.
+\newblock Cryptology ePrint Archive, Report 2013/306, 2013.
 
 \bibitem{hild-tene}
 A.~Hildebrand and G.~Tenenbaum.
 \newblock Integers without large prime factors.
-\newblock 5:411--484, 1993.
+\newblock {\em JTNB}, 5:411--484, 1993.
 
 \bibitem{joux-lercier-smart-vercauteren06}
 A.~Joux, R.~Lercier, N.~Smart, and F.~Vercauteren.
 \newblock The {N}umber {F}ield {S}ieve in the {M}edium {P}rime {C}ase.
 \newblock In C.~Dwork, editor, {\em Advances in Cryptology -- Crypto 2006},
   number 4117 in Lecture Notes in Computer Science, pages 323--341, 2006.
+
+\bibitem{FFS_joux}
+Antoine Joux.
+\newblock Faster index calculus for the medium prime case application to
+  1175-bit and 1425-bit finite fields.
+\newblock In {\em Advances in Cryptology - EUROCRYPT 2013}, LNCS, pages
+  177--193. Springer, 2013.
 
 \bibitem{koblitz-menezes05}
 N.~Koblitz and A.~Menezes.
@@ -75,13 +95,6 @@ U~Krause.
 \newblock Absch\"{a}tzungen f\"{u}r die funktion $\psi_k(x,y)$ in algebraischen
   zahlk\"{o}rpern.
 \newblock {\em Manuscripta Mathematica}, 69:319 -- 331, 1990.
-
-\bibitem{lamacchia-odlyzko}
-B.~A. LaMacchia and A.~M. Odlyzko.
-\newblock Solving large sparse linear systems over finite fields.
-\newblock In A.~Menezes and S.~A. Vanstone, editors, {\em Advances in
-  Cryptology - Crypto 1990}, number 537 in Lecture Notes in Computer Science,
-  pages 109--133. Springer-Verlag, 1990.
 
 \bibitem{lenstra01}
 A.~K. Lenstra.

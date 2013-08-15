@@ -35,7 +35,7 @@ Hangzhou Normal University, China\\
 
 \maketitle
 \begin{abstract}
-During an ongoing examination of the behaviour, in practice, of the Number Field Sieve (NFS) in the medium prime case we have noticed numerous interesting patterns. In this paper we present findings on run-time observations of an aspect of the sieving stage. The contributions of these observations to the computational mathematics community are twofold: firstly, they bring us a step closer to understanding the true practical effectiveness of the algorithm and secondly, they enabled the development of a test for the effectiveness of the polynomials used in the NFS. The results of this work are of particular interest to cryptographers: the run-time of the NFS determines directly the security level of some discrete logarithm problem based protocols, such as those arising in pairing-based cryptography.
+During an ongoing examination of the behaviour, in practice, of the Number Field Sieve (NFS) in the medium prime case we have noticed numerous interesting patterns. In this paper we present findings on run-time observations of one aspect of the sieving stage. The contributions of these observations to the computational mathematics community are twofold: firstly, they bring us a step closer to understanding the true practical effectiveness of the algorithm and secondly, they enabled the development of a test for the effectiveness of the polynomials used in the NFS. The results of this work are of particular interest to cryptographers: the run-time of the NFS determines directly the security level of some discrete logarithm problem based protocols, such as those arising in pairing-based cryptography.
 \end{abstract}
 %================================================================
 \section{Introduction and Motivation}
@@ -49,15 +49,15 @@ There are various known algorithms for solving the DLP, the most appropriate dep
 
 Little is known about the practical effectiveness of the NFS in the medium prime case which limits our understanding of the security of PBC protocols. In this work we examine one aspect of this NFS version.
 
-The ultimate goal of this continuing project is to increase the general understanding of the behaviour of the NFS. The motivation for this work is threefold: firstly, the behaviour of other NFS versions is known to vary widely \cite{zajac,dan_predicting_nfs}. Secondly, implementation of cryptographic protocols on small devices requires accurate security estimates as memory and processing power are limited. Finally, recent advances in solving the DLP in binary fields \cite{FFS_rob, FFS_antoine, joux_imporved} will promote the use of medium prime fields in PBC, over binary fields; it is necessary to investigate the problem in this increasingly utilised setting.
+The ultimate goal of this continuing project is to increase the general understanding of the behaviour of the NFS. The motivation for this work is threefold: firstly, the behaviour of other NFS versions is known to vary widely \cite{zajac,dan_predicting_nfs}. Secondly, implementation of cryptographic protocols on small devices requires accurate security estimates as memory and processing power are limited. Finally, recent advances in solving the DLP in binary fields \cite{FFS_rob1,FFS_rob2,FFS_joux} will promote the use of medium prime fields in PBC, over binary fields; it is necessary to investigate the problem in this increasingly utilised setting.
 
 
 The analysis of the NFS algorithm in \cite{joux-lercier-smart-vercauteren06} is given for finite fields $\F_{p^n}$ as both $p$ and $n$ tend to infinity which necessitates loss of detail and generalisation to limiting cases. We wish to fine-tune this analysis, model the behaviour of the NFS in the context of  PBC, retaining as much detail as possible, performing statistical analysis on experimental results. In this work we outline some of the practical observations made during our analysis. Using these observations we have developed a ``pre-NFS'' polynomial test on the effectiveness of a particular NFS instance. We also introduce a variation in the NFS polynomial selection. The results of our work will be of interest to implementers of the NFS and pairing-based protocols alike. 
 
 The remainder of this paper is organised as follows: In section \ref{s:nfs} we give a brief introduction to the NFS. In section \ref{s:smooth} we examine one aspect of the theoretical complexity analysis, which solidifies our motivation and introduce the particular aspect of the NFS that this work focuses on. In section \ref{s:context} we explain our experiment setting and the process of our investigation, presenting the results of this undertaking in section \ref{s:results}. Conclusions and open problems are presented in section \ref{s:conclusion}.
 %================================================================ 
-\subsection*{Acknowledgments}
-The authors thank Mike Scott and Rob Granger for their continual advice and support, Nigel Bean and Jono Tuke for helpful discussions.
+%\subsection*{Acknowledgments}
+%The authors thank Mike Scott and Rob Granger for their continual advice and support, Nigel Bean and Jono Tuke for helpful discussions.
 %================================================================
 
 \section{NFS in a nutshell} 
